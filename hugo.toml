@@ -1,0 +1,91 @@
+baseURL = "https://objethomeshop.github.io/"
+languageCode = "ko-kr"
+title = "objethomeshop 쇼핑 블로그"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+summaryLength = 35
+
+[pagination]
+pagerSize = 12
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[markup]
+	[markup.goldmark]
+		[markup.goldmark.renderer]
+			unsafe = true
+
+[minify]
+disableXML = false
+minifyOutput = true
+
+[sitemap]
+changefreq = "daily"
+priority = 0.7
+filename = "sitemap.xml"
+
+[permalinks]
+posts = "/posts/:slug/"
+
+[params]
+defaultTheme = "auto"
+disableThemeToggle = false
+ShowShareButtons = true
+ShowReadingTime = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowToc = true
+TocOpen = false
+env = "production"
+description = "미니멀리스트를 위한 실용적인 홈 리빙 쇼핑 블로그입니다. 정리수납, 주방용품, 욕실소품 등 집안 곳곳을 깔끔하게 꾸밀 수 있는 생활용품을 매일 엄선하여 소개합니다"
+keywords = ["홈리빙쇼핑", "생활용품추천", "정리수납", "주방용품", "욕실소품"]
+images = ["/images/og-default.webp"]
+
+# Search engine verification (set only when needed)
+googleSiteVerification = ""
+naverSiteVerification = ""
+bingSiteVerification = ""
+yandexSiteVerification = ""
+
+[params.homeInfoParams]
+Title = "집을 더 편리하게, 오브제홈샵 생활용품 큐레이션"
+Content = "매일 사용하는 생활용품, 더 똑똑하게 고르고 싶으신가요? 오브제홈샵에서는 주방, 욕실, 거실 등 공간별로 꼭 필요한 실용적인 홈 리빙 아이템을 엄선해 소개합니다. 정리수납 용품부터 편리한 주방 도구까지, 일상을 더욱 쾌적하게 만들어줄 제품들을 만나보세요."
+
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1000
+threshold = 0.4
+minMatchCharLength = 2
+keys = ["title", "permalink", "summary", "content"]
+
+[[menu.main]]
+identifier = "search"
+name = "Search"
+url = "/search/"
+weight = 5
+
+[[menu.main]]
+identifier = "posts"
+name = "Posts"
+url = "/posts/"
+weight = 10
+
+[[menu.main]]
+identifier = "categories"
+name = "Categories"
+url = "/categories/"
+weight = 20
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 30
